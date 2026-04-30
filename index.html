@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Petals of Paradise - Fresh flower bouquets, crochet bouquets, event decoration, birthday and wedding flower services in Butwal, Nepal." />
+  <meta name="keywords" content="flower shop, bouquets, Butwal Nepal, wedding decoration, birthday bouquets, crochet flowers, same day delivery" />
+  <meta name="author" content="Petals of Paradise" />
+  <title>Petals of Paradise | Flowers & Bouquets in Butwal, Nepal</title>
+  <style>
+    :root{
+      --primary:#d94b76;
+      --primary-dark:#b93a61;
+      --secondary:#f7d8e1;
+      --accent:#f4a261;
+      --bg:#fff8fb;
+      --text:#3f2d35;
+      --muted:#7f6470;
+      --card:#ffffff;
+      --shadow:0 10px 30px rgba(217,75,118,.12);
+      --radius:22px;
+      --radius-sm:16px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(247,216,225,.55), transparent 30%),
+        radial-gradient(circle at top right, rgba(252,232,239,.6), transparent 35%),
+        linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font:inherit}
+
+    .topbar{
+      background: linear-gradient(90deg, var(--primary), #e15f86);
+      color:#fff;
+      font-size:14px;
+      padding:10px 16px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 18px rgba(0,0,0,.08);
+    }
+
+    .topbar span{font-weight:700}
+    .container{width:min(var(--max), calc(100% - 28px)); margin:0 auto}
+    header{
+      position:sticky;
+      top:40px;
+      z-index:999;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,.86);
+      border-bottom:1px solid rgba(217,75,118,.08);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
+    }
+
+    .brand-mark{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle at 30% 30%, #ffd7e4 0 22%, transparent 23%),
+        radial-gradient(circle at 70% 30%, #ffd7e4 0 22%, transparent 23%),
+        radial-gradient(circle at 30% 70%, #ffd7e4 0 22%, transparent 23%),
+        radial-gradient(circle at 70% 70%, #ffd7e4 0 22%, transparent 23%),
+        radial-gradient(circle at 50% 50%, #ff88ad 0 24%, #ff5f8f 25% 52%, #fff 53% 100%);
+      box-shadow:0 8px 20px rgba(217,75,118,.18);
+      flex:0 0 auto;
+    }
+
+    .brand h1{
+      font-size:1.06rem;
+      line-height:1.1;
+      margin:0;
+      color:var(--primary-dark);
+    }
+    .brand p{
+      margin:3px 0 0;
+      font-size:.84rem;
+      color:var(--muted);
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+      justify-content:center;
+      font-weight:600;
+      color:#4c3943;
+    }
+    .menu a{
+      position:relative;
+      padding:8px 0;
+    }
+    .menu a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      border-radius:999px;
+      background:var(--primary);
+      transition:.25s ease;
+    }
+    .menu a:hover::after{width:100%}
+    .menu a:hover{color:var(--primary)}
+
+    .header-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:220px;
+      justify-content:flex-end;
+    }
+
+    .icon-btn{
+      position:relative;
+      border:none;
+      background:#fff;
+      border-radius:999px;
+      padding:10px 14px;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+      transition:.25s ease;
+      color:var(--text);
+    }
+    .icon-btn:hover{transform:translateY(-2px)}
+    .badge{
+      position:absolute;
+      top:-6px;
+      right:-2px;
+      background:var(--primary);
+      color:#fff;
+      width:22px;
+      height:22px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:.75rem;
+      font-weight:700;
+      border:2px solid #fff;
+    }
+
+    .lang-btn{
+      border:1px solid rgba(217,75,118,.25);
+      background:#fff;
+      color:var(--primary-dark);
+      padding:10px 14px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:38px 0 26px;
+    }
+
+    .hero-card{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:20px;
+      align-items:center;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,242,247,.84)),
+        url('https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=1600&q=80') center/cover;
+      border-radius:34px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(217,75,118,.09);
+      min-height:520px;
+    }
+
+    .hero-left{
+      padding:10px 8px 10px 6px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(217,75,118,.08);
+      color:var(--primary-dark);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+      margin-bottom:16px;
+      font-size:.92rem;
+    }
+
+    .hero h2{
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height:1;
+      margin:0 0 14px;
+      color:var(--primary);
+      letter-spacing:-.02em;
+    }
+
+    .hero h3{
+      margin:0 0 14px;
+      color:#3b6d4f;
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+      font-weight:700;
+    }
+
+    .hero p{
+      margin:0 0 18px;
+      font-size:1.02rem;
+      line-height:1.8;
+      color:var(--muted);
+      max-width:54ch;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:16px 0 20px;
+      color:#533743;
+      font-weight:600;
+    }
+
+    .hero-meta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+      border-radius:999px;
+      padding:9px 14px;
+      box-shadow:0 8px 20px rgba(0,0,0,.05);
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:6px;
+    }
+
+    .btn{
+      border:none;
+      cursor:pointer;
+      border-radius:999px;
+      padding:14px 22px;
+      font-weight:800;
+      transition:.25s ease;
+      letter-spacing:.02em;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg, var(--primary), #ea6b93);
+      color:#fff;
+      box-shadow:0 14px 30px rgba(217,75,118,.25);
+    }
+    .btn-primary:hover{transform:translateY(-2px); background:linear-gradient(135deg, var(--primary-dark), var(--primary))}
+    .btn-light{
+      background:#fff;
+      color:var(--primary-dark);
+      border:1px solid rgba(217,75,118,.18);
+      box-shadow:var(--shadow);
+    }
+    .btn-light:hover{transform:translateY(-2px)}
+
+    .hero-right{
+      position:relative;
+      min-height:460px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .bouquet-visual{
+      position:relative;
+      width:min(100%, 440px);
+      aspect-ratio: 1/1.15;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,.12);
+      background:#fff;
+    }
+
+    .bouquet-visual img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .stamp{
+      position:absolute;
+      right:18px;
+      top:18px;
+      background:linear-gradient(135deg, #ff6f95, #d94b76);
+      color:#fff;
+      padding:18px 18px;
+      border-radius:28px;
+      border:4px solid rgba(255,255,255,.85);
+      box-shadow:0 12px 28px rgba(217,75,118,.25);
+      text-align:center;
+      font-weight:800;
+      line-height:1.35;
+      width:150px;
+    }
+
+    .floating-card{
+      position:absolute;
+      left:-8px;
+      bottom:18px;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      padding:14px 16px;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(217,75,118,.12);
+      max-width:210px;
+    }
+    .floating-card strong{display:block; color:var(--primary-dark); margin-bottom:4px}
+    .floating-card span{color:var(--muted); font-size:.92rem}
+
+    .section{
+      padding:26px 0 8px;
+    }
+    .section-title{
+      text-align:center;
+      margin-bottom:18px;
+    }
+    .section-title h3{
+      margin:0;
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      color:var(--primary-dark);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .section-title p{
+      margin:8px 0 0;
+      color:var(--muted);
+    }
+
+    .services-strip{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+      margin:0 0 24px;
+    }
+    .service-pill{
+      background:#fff;
+      border:1px solid rgba(217,75,118,.08);
+      border-radius:18px;
+      padding:16px 14px;
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .service-ico{
+      width:44px;height:44px;border-radius:14px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(217,75,118,.13), rgba(217,75,118,.06));
+      font-size:1.15rem;
+      flex:0 0 auto;
+    }
+    .service-pill strong{display:block;margin-bottom:3px}
+    .service-pill small{color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(217,75,118,.09);
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 36px rgba(217,75,118,.15);
+    }
+
+    .card .thumb{
+      height:260px;
+      overflow:hidden;
+      background:#f6f0f2;
+    }
+    .card .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.35s ease;
+    }
+    .card:hover .thumb img{transform:scale(1.04)}
+    .card .content{
+      padding:16px;
+      text-align:center;
+    }
+    .card h4{
+      margin:0 0 6px;
+      font-size:1.07rem;
+      color:#3c2a35;
+    }
+    .price{
+      color:var(--primary-dark);
+      font-weight:800;
+      margin-bottom:12px;
+    }
+    .card .btn{
+      width:100%;
+      padding:12px 16px;
+      font-size:.95rem;
+    }
+
+    .offers{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .offer{
+      background:#fff;
+      border-radius:22px;
+      padding:20px 16px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(217,75,118,.09);
+      text-align:center;
+    }
+    .offer .emoji{
+      font-size:1.8rem;
+      margin-bottom:8px;
+    }
+    .offer h4{margin:0 0 8px; color:var(--primary-dark)}
+    .offer p{margin:0; color:var(--muted); line-height:1.7}
+    .offer .big{
+      display:block;
+      font-size:1.5rem;
+      font-weight:900;
+      margin:8px 0;
+      color:var(--primary);
+    }
+
+    .order-wrap{
+      display:grid;
+      grid-template-columns: 1.3fr .8fr;
+      gap:18px;
+      align-items:start;
+      margin-top:10px;
+    }
+
+    .order-card, .why-card, .testimonial, .contact-card{
+      background:#fff;
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(217,75,118,.09);
+    }
+
+    .order-card{
+      padding:20px;
+    }
+
+    .order-form{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      margin-top:12px;
+    }
+    .field.full{grid-column:1 / -1}
+    .field label{
+      display:block;
+      font-size:.92rem;
+      font-weight:700;
+      margin-bottom:7px;
+      color:#5b4250;
+    }
+    .field input, .field select, .field textarea{
+      width:100%;
+      border:1px solid rgba(217,75,118,.15);
+      border-radius:14px;
+      padding:13px 14px;
+      background:#fff;
+      outline:none;
+      transition:.2s ease;
+      color:var(--text);
+    }
+    .field textarea{min-height:112px; resize:vertical}
+    .field input:focus, .field select:focus, .field textarea:focus{
+      border-color: rgba(217,75,118,.5);
+      box-shadow:0 0 0 4px rgba(217,75,118,.08);
+    }
+
+    .why-card{
+      padding:20px;
+      position:sticky;
+      top:120px;
+    }
+    .why-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:12px 0;
+      border-bottom:1px dashed rgba(217,75,118,.14);
+    }
+    .why-item:last-child{border-bottom:none}
+    .why-item .ico{
+      width:40px;height:40px;border-radius:14px;
+      background:rgba(217,75,118,.08);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+      font-size:1.05rem;
+    }
+    .why-item strong{display:block;margin-bottom:4px}
+    .why-item span{color:var(--muted); font-size:.94rem; line-height:1.5}
+
+    .testimonials{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .testimonial{
+      padding:18px;
+    }
+    .quote{
+      font-size:2rem;
+      color:var(--primary);
+      line-height:1;
+    }
+    .testimonial p{
+      color:#5f4b56;
+      line-height:1.8;
+      margin:10px 0 14px;
+    }
+    .stars{color:#f1b400; letter-spacing:2px; font-size:1.05rem}
+    .author{color:var(--primary-dark); font-weight:800; margin-top:8px}
+
+    .contact-band{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+    }
+    .contact-card{
+      padding:18px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .contact-card .ico{
+      font-size:1.2rem;
+      width:42px;height:42px;
+      border-radius:14px;
+      background:rgba(217,75,118,.08);
+      display:grid;
+      place-items:center;
+      flex:0 0 auto;
+    }
+    .contact-card strong{display:block;margin-bottom:4px}
+    .contact-card span{color:var(--muted); line-height:1.6}
+
+    footer{
+      margin-top:28px;
+      background:linear-gradient(180deg, #d94b76, #ba3f65);
+      color:#fff;
+      padding:28px 0 16px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .9fr .9fr .9fr;
+      gap:18px;
+    }
+    .footer-grid h4{margin:0 0 12px}
+    .footer-grid p, .footer-grid a, .footer-grid li{
+      color:rgba(255,255,255,.9);
+      line-height:1.8;
+      font-size:.96rem;
+    }
+    .footer-grid ul{list-style:none;padding:0;margin:0}
+    .socials{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .socials a{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.13);
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .footer-bottom{
+      margin-top:18px;
+      padding-top:14px;
+      border-top:1px solid rgba(255,255,255,.18);
+      text-align:center;
+      color:rgba(255,255,255,.88);
+      font-size:.92rem;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:1000;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      background:#25d366;
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 28px rgba(0,0,0,.2);
+      font-size:1.6rem;
+    }
+
+    .lang-nepali .en-only{display:none}
+    .lang-nepali .ne-only{display:inline}
+    .ne-only{display:none}
+
+    @media (max-width: 1080px){
+      .hero-card,
+      .order-wrap,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+      .services-strip,
+      .offers,
+      .contact-band,
+      .testimonials{
+        grid-template-columns:1fr 1fr;
+      }
+      .grid{grid-template-columns:1fr 1fr}
+      .why-card{position:static}
+    }
+
+    @media (max-width: 760px){
+      header{top:0}
+      .nav{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .brand, .header-actions{min-width:0; justify-content:center}
+      .menu{
+        gap:14px;
+        font-size:.95rem;
+      }
+      .hero-card{
+        padding:20px;
+        min-height:auto;
+      }
+      .hero-right{min-height:auto}
+      .services-strip,
+      .offers,
+      .grid,
+      .contact-band,
+      .testimonials,
+      .order-form{
+        grid-template-columns:1fr;
+      }
+      .card .thumb{height:230px}
+      .floating-card{
+        position:static;
+        margin-top:12px;
+        max-width:none;
+      }
+      .stamp{right:12px; top:12px; width:130px; padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span>Special Offer:</span> 10% OFF on Birthday Orders | 15% OFF on Anniversary & Wedding Bookings!
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#home" aria-label="Petals of Paradise Home">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <h1>Petals of Paradise</h1>
+            <p>Blossoming Happiness</p>
+          </div>
+        </a>
+
+        <nav class="menu" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#bouquets">Bouquets</a>
+          <a href="#services">Services</a>
+          <a href="#offers">Offers</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Cart">
+            🛒 <span class="badge">0</span>
+          </button>
+          <button class="lang-btn" id="langToggle" aria-label="Toggle language">नेपाली</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-left">
+            <div class="eyebrow">💐 Fresh flowers, handmade charm, and same-day joy</div>
+            <h2 class="en-only">Petals of Paradise</h2>
+            <h2 class="ne-only">फूलले बोल्छ मनका कुरा</h2>
+            <h3 class="en-only">Handmade with Love, Delivered with Happiness</h3>
+            <h3 class="ne-only">माया र सिर्जनाले बनेका, खुशीसाथ डेलिभरी</h3>
+            <p class="en-only">
+              A modern flower shop in Butwal, Nepal, offering premium real flower bouquets,
+              crochet bouquets, event decoration, birthday surprises, wedding florals, and
+              fast same-day delivery for every special moment.
+            </p>
+            <p class="ne-only">
+              बुटवल, नेपालमा रहेको आधुनिक फूल पसल जहाँ तपाईंले ताजा फूलका बुके, क्रोशिया बुके,
+              कार्यक्रम सजावट, जन्मदिन सरप्राइज, विवाह सजावट र छिटो डेलिभरी सेवा पाउनुहुनेछ।
+            </p>
+
+            <div class="hero-meta">
+              <span>📍 Butwal, Nepal</span>
+              <span>🌸 Fresh Flowers</span>
+              <span>🎀 Handmade Bouquets</span>
+              <span>🚚 Same Day Delivery</span>
+            </div>
+
+            <div class="cta-row">
+              <button class="btn btn-primary" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">ORDER NOW</button>
+              <button class="btn btn-light" onclick="document.getElementById('bouquets').scrollIntoView({behavior:'smooth'})">VIEW COLLECTION</button>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="bouquet-visual">
+              <img src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=1200&q=80" alt="Beautiful pink flower bouquet" />
+              <div class="stamp">Same Day Delivery in Butwal</div>
+            </div>
+            <div class="floating-card">
+              <strong>Special Occasion Ready</strong>
+              <span>Birthday, anniversary, wedding, proposal, and corporate floral styling.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Our Beautiful Services</h3>
+          <p>Everything you need for flowers, gifting, and celebrations.</p>
+        </div>
+
+        <div class="services-strip">
+          <div class="service-pill">
+            <div class="service-ico">🌹</div>
+            <div><strong>Real Flower Bouquets</strong><small>Freshly arranged daily</small></div>
+          </div>
+          <div class="service-pill">
+            <div class="service-ico">🎉</div>
+            <div><strong>Event Decoration</strong><small>Elegant floral setups</small></div>
+          </div>
+          <div class="service-pill">
+            <div class="service-ico">🧶</div>
+            <div><strong>Crochet Flowers</strong><small>Handmade forever gifts</small></div>
+          </div>
+          <div class="service-pill">
+            <div class="service-ico">🚚</div>
+            <div><strong>Same Day Delivery</strong><small>Fast service in Butwal</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bouquets" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Our Signature Bouquets</h3>
+          <p>Fresh flowers, handmade bouquets, crochet bouquets, and gift combos.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1508710285745-ed5145d9b1b6?auto=format&fit=crop&w=1200&q=80" alt="Red rose bouquet" /></div>
+            <div class="content">
+              <h4>Classic Red Rose Bouquet</h4>
+              <div class="price">Rs. 1,200</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1519305127878-4766acb5b1b2?auto=format&fit=crop&w=1200&q=80" alt="Mixed pink bouquet" /></div>
+            <div class="content">
+              <h4>Lily & Rose Delight</h4>
+              <div class="price">Rs. 1,600</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=1200&q=80" alt="Sunflower bouquet" /></div>
+            <div class="content">
+              <h4>Sunflower Happiness</h4>
+              <div class="price">Rs. 1,400</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1518709414768-a88981a4515d?auto=format&fit=crop&w=1200&q=80" alt="Colorful mixed bouquet" /></div>
+            <div class="content">
+              <h4>Mixed Flower Bouquet</h4>
+              <div class="price">Rs. 1,300</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80" alt="Tulip bouquet" /></div>
+            <div class="content">
+              <h4>Elegant Tulip Bouquet</h4>
+              <div class="price">Rs. 1,500</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1545239705-1564c3e5f6c6?auto=format&fit=crop&w=1200&q=80" alt="White bouquet" /></div>
+            <div class="content">
+              <h4>White Serenity Bouquet</h4>
+              <div class="price">Rs. 1,250</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1469259943454-aa100abba749?auto=format&fit=crop&w=1200&q=80" alt="Crochet roses bouquet" /></div>
+            <div class="content">
+              <h4>Crochet Rose Bouquet</h4>
+              <div class="price">Rs. 1,800</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1514425266337-1a5f8b5c0f5b?auto=format&fit=crop&w=1200&q=80" alt="Crochet sunflower bouquet" /></div>
+            <div class="content">
+              <h4>Crochet Sunflower Bouquet</h4>
+              <div class="price">Rs. 1,700</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1453847668862-487637052f8a?auto=format&fit=crop&w=1200&q=80" alt="Blue rose bouquet" /></div>
+            <div class="content">
+              <h4>Crochet Blue Rose Bouquet</h4>
+              <div class="price">Rs. 1,800</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1200&q=80" alt="Crochet tulip bouquet" /></div>
+            <div class="content">
+              <h4>Crochet Tulip Bouquet</h4>
+              <div class="price">Rs. 1,600</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?auto=format&fit=crop&w=1200&q=80" alt="Money bouquet" /></div>
+            <div class="content">
+              <h4>Money Bouquet</h4>
+              <div class="price">Rs. 2,500</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80" alt="Chocolate and rose bouquet" /></div>
+            <div class="content">
+              <h4>Chocolate & Rose Combo</h4>
+              <div class="price">Rs. 2,000</div>
+              <button class="btn btn-primary">ORDER NOW</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Special Offers</h3>
+          <p>Celebrate every occasion with a beautiful discount.</p>
+        </div>
+
+        <div class="offers">
+          <div class="offer">
+            <div class="emoji">🎂</div>
+            <h4>Birthday Offer</h4>
+            <span class="big">10% OFF</span>
+            <p>On all birthday orders<br>Code: <strong>BDAY10</strong></p>
+          </div>
+          <div class="offer">
+            <div class="emoji">💍</div>
+            <h4>Anniversary Offer</h4>
+            <span class="big">15% OFF</span>
+            <p>On anniversary bouquets<br>Code: <strong>ANN15</strong></p>
+          </div>
+          <div class="offer">
+            <div class="emoji">👰</div>
+            <h4>Wedding Offer</h4>
+            <span class="big">20% OFF</span>
+            <p>On wedding bookings<br>Code: <strong>WED20</strong></p>
+          </div>
+          <div class="offer">
+            <div class="emoji">🎁</div>
+            <h4>Surprise Combo</h4>
+            <span class="big">Special Price</span>
+            <p>Bouquet + Chocolate<br><strong>Only Rs. 1,800</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Order Online</h3>
+          <p>Easy, fast, and secure flower ordering for Butwal and nearby areas.</p>
+        </div>
+
+        <div class="order-wrap">
+          <div class="order-card">
+            <form class="order-form">
+              <div class="field">
+                <label for="name">Your Name *</label>
+                <input id="name" type="text" placeholder="Enter your full name" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number *</label>
+                <input id="phone" type="tel" placeholder="98XXXXXXXX" />
+              </div>
+
+              <div class="field">
+                <label for="bouquet">Select Bouquet *</label>
+                <select id="bouquet">
+                  <option>-- Choose Bouquet --</option>
+                  <option>Classic Red Rose Bouquet</option>
+                  <option>Lily & Rose Delight</option>
+                  <option>Sunflower Happiness</option>
+                  <option>Mixed Flower Bouquet</option>
+                  <option>Elegant Tulip Bouquet</option>
+                  <option>White Serenity Bouquet</option>
+                  <option>Crochet Rose Bouquet</option>
+                  <option>Money Bouquet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="date">Delivery Date *</label>
+                <input id="date" type="date" />
+              </div>
+
+              <div class="field full">
+                <label for="address">Delivery Address *</label>
+                <input id="address" type="text" placeholder="Your full address in Butwal" />
+              </div>
+
+              <div class="field full">
+                <label for="message">Special Message (Optional)</label>
+                <textarea id="message" placeholder="Write your special message..."></textarea>
+              </div>
+
+              <div class="field full">
+                <button type="button" class="btn btn-primary" style="width:100%;">PLACE ORDER NOW</button>
+              </div>
+            </form>
+          </div>
+
+          <aside class="why-card">
+            <div class="section-title" style="margin-bottom:10px;">
+              <h3 style="font-size:1.7rem;">Why Choose Us?</h3>
+            </div>
+            <div class="why-item">
+              <div class="ico">🌷</div>
+              <div><strong>Fresh & Premium Flowers</strong><span>Handpicked for every occasion and carefully arranged.</span></div>
+            </div>
+            <div class="why-item">
+              <div class="ico">🪡</div>
+              <div><strong>Handmade with Love</strong><span>Unique crochet bouquets made to last and impress.</span></div>
+            </div>
+            <div class="why-item">
+              <div class="ico">🚚</div>
+              <div><strong>Same Day Delivery</strong><span>Fast and reliable delivery across Butwal.</span></div>
+            </div>
+            <div class="why-item">
+              <div class="ico">💖</div>
+              <div><strong>100% Satisfaction</strong><span>We deliver happiness, not just flowers.</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>What Our Customers Say</h3>
+          <p>Trusted by flower lovers for every celebration.</p>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <div class="quote">“</div>
+            <p>Beautiful bouquet and fresh flowers. Best service in Butwal!</p>
+            <div class="author">— Anusha K.</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="testimonial">
+            <div class="quote">“</div>
+            <p>The crochet bouquet was amazing. It looked elegant and will stay forever.</p>
+            <div class="author">— Suman B.</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="testimonial">
+            <div class="quote">“</div>
+            <p>On-time delivery and excellent decoration for our wedding.</p>
+            <div class="author">— Raj & Priya</div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-band">
+          <div class="contact-card">
+            <div class="ico">📍</div>
+            <div><strong>Located in Butwal</strong><span>Thapathali, Butwal-11<br>Rupandehi, Nepal</span></div>
+          </div>
+          <div class="contact-card">
+            <div class="ico">📞</div>
+            <div><strong>Call Us Anytime</strong><span>+977 9812345678<br>7 AM - 9 PM</span></div>
+          </div>
+          <div class="contact-card">
+            <div class="ico">🚚</div>
+            <div><strong>Same Day Delivery</strong><span>Order before 4 PM<br>Delivery within Butwal</span></div>
+          </div>
+          <div class="contact-card">
+            <div class="ico">🔒</div>
+            <div><strong>Secure Payment</strong><span>eSewa, Khalti, Cash on Delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Petals of Paradise</h4>
+          <p>Your trusted flower shop in Butwal, Nepal, for fresh flowers, handmade bouquets, and beautiful decorations for every occasion.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#bouquets">Bouquets</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li>Fresh Flower Bouquets</li>
+            <li>Handmade Bouquets</li>
+            <li>Crochet Bouquets</li>
+            <li>Event Decoration</li>
+            <li>Wedding Decoration</li>
+            <li>Corporate Events</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="WhatsApp">wa</a>
+            <a href="#" aria-label="TikTok">♪</a>
+          </div>
+          <p style="margin-top:14px;">We Accept<br><strong>eSewa</strong> · <strong>Khalti</strong> · <strong>Cash on Delivery</strong></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Petals of Paradise. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="#" aria-label="Chat on WhatsApp">✆</a>
+
+  <script>
+    const toggleBtn = document.getElementById('langToggle');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('lang-nepali');
+      toggleBtn.textContent = body.classList.contains('lang-nepali') ? 'English' : 'नेपाली';
+    });
+  </script>
+</body>
+</html>
