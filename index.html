@@ -6,118 +6,149 @@
 <title>Petal of Paradise - Flowers & Event Decoration</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#fff8fb;color:#333;line-height:1.6;}
-
-header{
-background:linear-gradient(120deg,#ff4d8d,#ffb6c1);
-padding:20px;
-color:white;
-position:sticky;
-top:0;
-z-index:1000;
+:root{
+  --pink:#ff4d8d;
+  --soft:#fff5f8;
+  --dark:#222;
 }
 
-nav{
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+body{background:var(--soft);color:var(--dark);}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#ff4d8d,#ff9bbf);
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.navbar{
+max-width:1200px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
+}
+
+.logo{
+font-size:26px;
+color:white;
+font-weight:bold;
+}
+
+.menu{
+display:flex;
+gap:18px;
+list-style:none;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+background:rgba(0,0,0,0.4);
+padding:20px;
+border-radius:12px;
+}
+
+/* SECTIONS */
+section{
+padding:60px 20px;
 max-width:1200px;
 margin:auto;
 }
 
-nav h1{font-size:28px;}
-nav ul{list-style:none;display:flex;gap:20px;}
-nav ul li a{color:white;text-decoration:none;font-weight:bold;}
-
-.hero{
-background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
-height:80vh;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
+h2{
 text-align:center;
-padding:20px;
-}
-
-.hero h2{
-font-size:50px;
-background:rgba(0,0,0,0.4);
-padding:20px;
-border-radius:10px;
-}
-
-.section{
-max-width:1200px;
-margin:50px auto;
-padding:20px;
-}
-
-.section h2{
-text-align:center;
+color:var(--pink);
 margin-bottom:30px;
-color:#ff4d8d;
+font-size:32px;
 }
 
-.cards{
+/* GRID */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
 background:white;
-padding:20px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
-.card:hover{transform:translateY(-5px);}
+.card:hover{transform:translateY(-6px);}
 
 .card img{
 width:100%;
-border-radius:10px;
 height:180px;
 object-fit:cover;
 }
 
-.discount{
+.card-content{
+padding:15px;
+}
+
+.card h3{color:var(--pink);margin-bottom:8px;}
+
+button{
+background:var(--pink);
+color:white;
+padding:10px 15px;
+border:none;
+border-radius:8px;
+margin-top:10px;
+cursor:pointer;
+}
+
+/* DISCOUNT BANNER */
+.banner{
 background:#ffe0eb;
 padding:20px;
 text-align:center;
 border-radius:10px;
 margin-bottom:30px;
+font-weight:bold;
 }
 
-button{
-background:#ff4d8d;
-color:white;
-border:none;
-padding:10px 15px;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
-}
-
-button:hover{background:#e63c7a;}
-
+/* FOOTER */
 footer{
-background:#ff4d8d;
+background:var(--pink);
 color:white;
 text-align:center;
-padding:20px;
-margin-top:50px;
+padding:25px;
+margin-top:40px;
 }
 
+/* FLOAT WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px;
+padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
@@ -128,142 +159,179 @@ font-weight:bold;
 <body>
 
 <header>
-<nav>
-<h1>Petal of Paradise 🌸</h1>
-<ul>
+<div class="navbar">
+<div class="logo">🌸 Petal of Paradise</div>
+<ul class="menu">
 <li><a href="#services">Services</a></li>
-<li><a href="#bouquet">Bouquets</a></li>
+<li><a href="#bouquets">Bouquets</a></li>
 <li><a href="#events">Events</a></li>
+<li><a href="#creative">Creative</a></li>
 <li><a href="#order">Order</a></li>
 </ul>
-</nav>
+</div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-<h2>Flowers that Speak Love & Celebration</h2>
+<h1>Flowers That Make Every Moment Magical</h1>
 </div>
 
-<section class="section" id="services">
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Premium Services</h2>
 
-<h2>Our Services</h2>
-
-<div class="discount">
-<h3>🎉 Special Discounts</h3>
-<p>Birthday Decoration up to 25% OFF | Wedding Packages Available</p>
+<div class="banner">
+🎉 Birthday Decoration UP TO 30% OFF | 💍 Wedding Decoration Packages Available
 </div>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
+<div class="card-content">
 <h3>Custom Bouquet Design</h3>
-<p>Personalized floral arrangements designed just for you.</p>
-<button>Order Now</button>
+<p>Roses 🌹 Tulips 🌷 Sunflowers 🌻 designed uniquely for you.</p>
+<button>Order</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321">
+<div class="card-content">
 <h3>Readymade Bouquets</h3>
-<p>Beautiful bouquets ready for any occasion.</p>
-<button>Buy Now</button>
+<p>Fresh, beautiful, and ready-to-gift flower bundles.</p>
+<button>Buy</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
-<h3>Event Floral Arrangement</h3>
-<p>Wedding, parties & corporate floral decoration.</p>
-<button>Book Service</button>
+<div class="card-content">
+<h3>Event Floral Decoration</h3>
+<p>Full floral setup for weddings, parties & corporate events.</p>
+<button>Book</button>
 </div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
-<h3>DIY Flower Kit</h3>
-<p>Create your own floral magic at home.</p>
-<button>Explore</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df">
-<h3>Crochet Flowers</h3>
-<p>Handmade artistic crochet floral designs.</p>
-<button>View</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1487537708572-3c850b5e856e">
-<h3>Custom Message Cards</h3>
-<p>Send emotions with personalized cards.</p>
-<button>Customize</button>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="events">
-<h2>Event Decoration Services</h2>
+<!-- EVENTS -->
+<section id="events">
+<h2>Event Management & Decoration</h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1529634891775-1c2c3f1c3a62">
+<div class="card-content">
 <h3>Wedding Decoration</h3>
-<p>Elegant floral wedding setups & stage decoration.</p>
+<p>Luxury floral stage, mandap & venue decoration.</p>
 <button>Book Wedding</button>
+</div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce">
+<div class="card-content">
 <h3>Birthday Decoration</h3>
-<p>Colorful themed birthday setups with discounts.</p>
+<p>Balloon + flower themed birthday setups with discounts.</p>
 <button>Book Birthday</button>
 </div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3">
-<h3>Corporate Events</h3>
-<p>Professional floral decoration for corporate events.</p>
-<button>Contact Us</button>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="order">
-<h2>Online Ordering & Delivery</h2>
+<!-- CREATIVE -->
+<section id="creative">
+<h2>Creative & Unique Services</h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-<h3>🛒 Online Order System</h3>
-<p>Order flowers easily through our website anytime.</p>
-<button>Start Order</button>
+<img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df">
+<div class="card-content">
+<h3>DIY Flower Kit</h3>
+<p>Make your own floral arrangements at home.</p>
+<button>Try DIY</button>
+</div>
 </div>
 
 <div class="card">
-<h3>📱 WhatsApp Order</h3>
-<p>Quick ordering via WhatsApp chat support.</p>
-<button onclick="window.open('https://wa.me/1234567890')">Chat Now</button>
+<img src="https://images.unsplash.com/photo-1529634891775-1c2c3f1c3a62">
+<div class="card-content">
+<h3>Crochet Flowers</h3>
+<p>Handmade artistic flowers that last forever.</p>
+<button>View</button>
+</div>
 </div>
 
 <div class="card">
-<h3>🚚 Same Day Delivery</h3>
-<p>Fresh flowers delivered on the same day.</p>
+<img src="https://images.unsplash.com/photo-1487537708572-3c850b5e856e">
+<div class="card-content">
+<h3>Custom Message Cards</h3>
+<p>Personalized notes with emotional messages.</p>
+<button>Customize</button>
+</div>
 </div>
 
 <div class="card">
-<h3>📦 Subscription Service</h3>
-<p>Weekly & monthly flower subscription plans.</p>
+<img src="https://images.unsplash.com/photo-1526045478516-99145907023c">
+<div class="card-content">
+<h3>Personalized Packaging</h3>
+<p>Luxury wrapping for gifting experience.</p>
+<button>Design</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+<h2>Online & Delivery Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
+<h3>Online Ordering</h3>
+<p>Order flowers anytime through our website.</p>
+<button>Order Now</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>WhatsApp Ordering</h3>
+<p>Quick orders via WhatsApp chat support.</p>
+<button onclick="window.open('https://wa.me/1234567890')">Chat</button>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Same Day Delivery</h3>
+<p>Fast delivery of fresh flowers at your doorstep.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Subscription Service</h3>
+<p>Weekly & monthly flower delivery plans.</p>
+</div>
 </div>
 
 </div>
 </section>
 
 <footer>
-<p>© 2026 Petal of Paradise | Flowers & Event Decoration</p>
-<p>Made with love for celebrations 🌸</p>
+<p>© 2026 Petal of Paradise 🌸 | Flowers & Event Decoration</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/1234567890">WhatsApp Us</a>
+<a class="whatsapp" href="https://wa.me/1234567890">WhatsApp</a>
 
 </body>
 </html>
