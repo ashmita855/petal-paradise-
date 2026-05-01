@@ -1,131 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Petals of Paradise - Fresh flower bouquets, crochet bouquets, event decoration, birthday and wedding flower services in Butwal, Nepal." />
-  <title>Petals of Paradise</title>
-
+  <title>Pastel Paradise | Butwal, Nepal</title>
+  <meta name="description" content="Pastel Paradise Butwal - elegant flower bouquets, birthday gifts, anniversary arrangements, wedding décor, and special offers in Butwal, Nepal." />
   <style>
-    body{font-family:Arial;margin:0;background:#fff8fb;color:#3f2d35}
-    .container{width:90%;margin:auto}
-    .card{background:#fff;border-radius:16px;overflow:hidden;margin:10px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-    img{width:100%;height:250px;object-fit:cover}
-    .content{padding:10px;text-align:center}
-    button{padding:10px 15px;border:none;background:#d94b76;color:white;border-radius:20px;cursor:pointer}
-    button:hover{background:#b93a61}
-    h1,h2{text-align:center}
-  </style>
-</head>
+    :root {
+      --bg: #fff8fb;
+      --card: rgba(255, 255, 255, 0.78);
+      --text: #3f2f3a;
+      --muted: #7b6674;
+      --pink: #f7a8c4;
+      --rose: #e86f9a;
+      --peach: #ffccae;
+      --lavender: #d9c8ff;
+      --mint: #d9f5e7;
+      --gold: #f5c96a;
+      --shadow: 0 18px 50px rgba(155, 91, 122, 0.16);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --max: 1180px;
+    }* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(247,168,196,0.30), transparent 24%),
+    radial-gradient(circle at top right, rgba(217,200,255,0.34), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(217,245,231,0.40), transparent 24%),
+    linear-gradient(180deg, #fffafd 0%, #fff6fb 100%);
+  overflow-x: hidden;
+}
 
-<body>
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
-<h1>🌸 Petals of Paradise 🌸</h1>
-<p style="text-align:center">Fresh Flowers | Crochet Bouquets | Butwal, Nepal</p>
+.container {
+  width: min(100% - 32px, var(--max));
+  margin: 0 auto;
+}
 
-<div class="container">
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 250, 252, 0.72);
+  border-bottom: 1px solid rgba(232, 111, 154, 0.10);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.brand-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--pink), var(--lavender));
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+  color: white;
+  font-size: 22px;
+}
+.brand small {
+  display: block;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0;
+  margin-top: 2px;
+}
 
-<!-- REAL FLOWERS -->
-<h2>🌹 Real Flower Bouquets</h2>
-<div class="grid">
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+.nav-links a:hover { color: var(--rose); }
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" />
-    <div class="content">
-      <h3>Lily Bouquet</h3>
-      <p>Rs. 1200</p>
-      <button>Order Now</button>
-    </div>
-  </div>
+.hero {
+  padding: 34px 0 42px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+  min-height: 82vh;
+}
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7" />
-    <div class="content">
-      <h3>Rose Bouquet</h3>
-      <p>Rs. 1300</p>
-      <button>Order Now</button>
-    </div>
-  </div>
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(232,111,154,0.12);
+  box-shadow: 0 8px 24px rgba(155,91,122,0.08);
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.eyebrow span {
+  color: var(--rose);
+  font-weight: 800;
+}
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321" />
-    <div class="content">
-      <h3>Sunflower Bouquet</h3>
-      <p>Rs. 1400</p>
-      <button>Order Now</button>
-    </div>
-  </div>
+h1 {
+  margin: 0;
+  font-size: clamp(2.7rem, 5vw, 5.3rem);
+  line-height: 0.96;
+  letter-spacing: -2px;
+}
+.gradient-text {
+  background: linear-gradient(135deg, #da4f85 0%, #8e66ff 46%, #2aa9a1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-</div>
+.hero p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 18px 0 28px;
+}
 
-<!-- CROCHET -->
-<h2>🧶 Crochet Bouquets</h2>
-<div class="grid">
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 10px 25px rgba(155,91,122,0.12);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--rose), #f39bbd);
+  color: white;
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.75);
+  color: var(--text);
+  border-color: rgba(232,111,154,0.12);
+}
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1607082349566-187342175e2d" />
-    <div class="content">
-      <h3>Crochet Roses</h3>
-      <p>Rs. 1800</p>
-      <button>Order Now</button>
-    </div>
-  </div>
+.hero-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.mini-card {
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(232,111,154,0.10);
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 8px 22px rgba(155,91,122,0.08);
+}
+.mini-card strong { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.mini-card span { color: var(--muted); font-size: 0.93rem; line-height: 1.5; }
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683" />
-    <div class="content">
-      <h3>Crochet Sunflower</h3>
-      <p>Rs. 1700</p>
-      <button>Order Now</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6" />
-    <div class="content">
-      <h3>Crochet Tulip</h3>
-      <p>Rs. 1600</p>
-      <button>Order Now</button>
-    </div>
-  </div>
-
-</div>
-
-<!-- SPECIAL GIFTS -->
-<h2>🎁 Special Gifts</h2>
-<div class="grid">
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924" />
-    <div class="content">
-      <h3>Money Bouquet</h3>
-      <p>Rs. 2500</p>
-      <button>Order Now</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1612203985729-70726954388a" />
-    <div class="content">
-      <h3>Chocolate Bouquet</h3>
-      <p>Rs. 2000</p>
-      <button>Order Now</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" />
-    <div class="content">
-      <h3>Mixed Combo</h3>
-      <p>Rs. 1800</p>
-      <button>Order Now</button>
-    </div>
-  </div>
-
-</div>
-
-</div>
-
-</body>
-</html>
+.bouquet-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.78), rgba(255,255,255,0.62));
+  border: 1px solid rgba(232,111,154,0.10);
+  border-radius: 34px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  isolation: isolate;
+}
+.bouquet-panel::before,
+.bouquet-panel::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(18px);
+  z-index: -1;
+  opacity: 0.7;
+}
+.bouquet-panel::before {
+  width: 220px; height: 220px;
+  background: rgba(247,168,196
